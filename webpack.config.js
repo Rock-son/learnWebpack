@@ -33,7 +33,7 @@ module.exports = {
             new webpack.optimize.CommonsChunkPlugin({
                 names: ['vendor', 'manifest']  //if there are any common modules, stick them in vendor file!
             }),
-            new HtmlWebpackPlugin({
+            new HtmlWebpackPlugin({ // used to make script injections and output index.html to dist folder
                 template: 'src/index.html'
             }),            
             new webpack.DefinePlugin({  //used to define window scoped variables within bundle.js
